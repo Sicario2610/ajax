@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax with Javascript</title>
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = Function();
+      {
+        if (xhr.readyState === 4) {
+          document.getElementById("ajax").innerHTML = xhr.responseText;
+        }
+      }
+      xhr.open("GET", "sidebar.html");
+      xhr.send();
+    </script>
+  </head>
+  <body>
+    <div class="grid-container centered">
+      <div class="grid-100">
+        <div class="heading">
+          <h1>Bring on the Ajax</h1>
+        </div>
+        <ul id="ajax"></ul>
+      </div>
+    </div>
+  </body>
+</html>
